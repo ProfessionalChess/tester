@@ -19,7 +19,7 @@ public class board {
         });
     }
     public static void main(String[] args) {
-        JFrame frame = new JFrame("menu");
+        JFrame frame = new JFrame("board");
         frame.setContentPane(new board().mainBoard);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
