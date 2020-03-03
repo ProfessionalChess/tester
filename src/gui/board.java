@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class board {
+public class board extends JFrame{
 
     private JPanel mainBoard;
     private JButton b11;
@@ -139,7 +139,10 @@ public class board {
     private int num2 = 0;
 
     public board() {
-
+        this.setContentPane(mainBoard);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.pack();
+        this.setVisible(true);
 
         b11.addActionListener(new ActionListener() {
             @Override
@@ -151,11 +154,8 @@ public class board {
 
     }
     public static void main(String[] args) {
-        JFrame frame = new JFrame("board");
-        frame.setContentPane(new board().mainBoard);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
+
+
     }
 
     private void createUIComponents() {
