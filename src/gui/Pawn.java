@@ -1,10 +1,12 @@
 package gui;
 
 public class Pawn extends Piece {
+
     public Pawn(){
-        super();
+        super(colour, coords);
 
     }//endCons
+
     public int[] move(){
         int[] possible = new int[5];
 

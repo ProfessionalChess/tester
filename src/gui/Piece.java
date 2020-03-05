@@ -1,13 +1,30 @@
 package gui;
 
-public class Piece {
-    boolean color;
+public abstract class Piece {
+    private boolean colour;
+    private int coords;
 
-    public Piece(){
+    public Piece(boolean colour, int coords) {
+        this.colour = colour;
+        this.coords = coords;
+    }
 
+    public boolean isColour() {
+        return colour;
+    }
 
+    public void setColor(boolean colour) {
+        this.colour = colour;
+    }
 
-    }//const
+    public int getCoords() {
+        return coords;
+    }
+
+    public void setCoords(int coords) {
+        this.coords = coords;
+    }
+
 
 
 }//class

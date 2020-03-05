@@ -3,6 +3,7 @@ package gui;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class board extends JFrame{
 
@@ -135,8 +136,8 @@ public class board extends JFrame{
     private JPanel q62;
     private JPanel q63;
     private JPanel q64;
-    private int num1 = 0;
-    private int num2 = 0;
+    public static int num1 = 0;
+    public static int num2 = 0;
 
     public board() {
         this.setContentPane(mainBoard);
@@ -160,5 +161,17 @@ public class board extends JFrame{
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
+    }
+
+    public static void trackMove(int input) {
+       if (input == num1) {
+           num1 = 0;
+       } else if (num1 == 0) {
+           num1 = input;
+       } else if(num1 != 0) {
+           num2 = input;
+       } else {
+           System.out.println("huh");
+       }
     }
 }
