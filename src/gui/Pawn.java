@@ -2,7 +2,7 @@ package gui;
 
 public class Pawn extends Piece {
 
-    public Pawn(){
+    public Pawn(boolean colour, int coords){
         super(colour, coords);
 
     }//endCons
