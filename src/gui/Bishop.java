@@ -1,9 +1,9 @@
 package gui;
 
 public class Bishop extends Piece {
-    public Bishop(boolean colour, int coords) {
+    public Bishop(boolean colour, int x, int y) {
 
-        super(colour, coords);
+        super(colour, x,y);
     }
 
     public int[] move(){

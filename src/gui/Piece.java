@@ -1,12 +1,16 @@
 package gui;
 
-public abstract class Piece {
-    private boolean colour;
-    private int coords;
+import java.awt.Point;
 
-    public Piece(boolean colour, int coords) {
+public abstract class Piece {
+    public boolean colour;
+    public int x;
+    public int y;
+    public Point loc;
+
+    public Piece(boolean colour, int x, int y) {
         this.colour = colour;
-        this.coords = coords;
+        loc = new Point(x,y);
     }
 
     public boolean isColour() {
@@ -17,13 +21,10 @@ public abstract class Piece {
         this.colour = colour;
     }
 
-    public int getCoords() {
-        return coords;
-    }
+    public void possibleMoves(){}
 
-    public void setCoords(int coords) {
-        this.coords = coords;
-    }
+
+
 
 
 
