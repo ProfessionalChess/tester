@@ -30,10 +30,13 @@ public class Pawn extends Piece {
            }
        }
 
-        for (int i = 0; i < pM.size(); i++) {
-            System.out.println(pM.get(i));
-            System.out.println(pM.size());
-        }
 
+    }
+
+    public void printPossible(){
+        System.out.println(pM.size());
+        for (int i = 0; i < pM.size(); i++) {
+            System.out.println(pM);
+        }
     }
 }//end class

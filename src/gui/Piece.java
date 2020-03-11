@@ -23,6 +23,8 @@ public abstract class Piece {
 
     public void possibleMoves(){}
 
+    public void printPossible(){}
+
 
 
 

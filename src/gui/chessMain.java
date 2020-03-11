@@ -28,7 +28,10 @@ public class chessMain {
         //end of points
         //pieces.add(new Pawn(true, 1,7));
         pieces.add(new Queen(true, 4,5));
-        pieces.get(0).possibleMoves();
+        pieces.add(new Rook(true, 4,5));
+         pieces.add(new Bishop(true, 4,5));
+        pieces.get(2).possibleMoves();
+        pieces.get(2).printPossible();
         JFrame frame = new menu();
 
     }//end main
