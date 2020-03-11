@@ -138,6 +138,7 @@ public class board extends JFrame{
     private JPanel q64;
     public static int num1 = 0;
     public static int num2 = 0;
+    public static ImageIcon[][] images = new ImageIcon[8][8];
 
     public board() {
         this.setContentPane(mainBoard);
