@@ -1,8 +1,9 @@
 package gui;
 
-public class Queen {
-    public Queen(){
-        super();
+public class Queen extends Piece{
+    public Queen(boolean colour, int coords) {
+
+        super(colour, coords);
     }
     public int[] move(){
         int[] possible = new int[5];

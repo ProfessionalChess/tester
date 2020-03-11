@@ -1,9 +1,9 @@
 package gui;
 
-public class King  {
-    public King(){
-        super();
+public class King extends Piece {
+    public King(boolean colour, int coords) {
 
+        super(colour, coords);
     }
 
 
