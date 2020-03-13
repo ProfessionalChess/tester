@@ -11,6 +11,7 @@ public class chessMain {
 
     public static ArrayList<Piece> pieces = new ArrayList();
     public static Point[] grid = new Point[64];
+    public static Game currentGame;
 
 
     public static void main(String[] args) {
@@ -50,6 +51,9 @@ public class chessMain {
         pieces.add(new Bishop(false, 6,2));
         pieces.add(new Knight(false, 7,2));
         pieces.add(new Rook(false, 8,2));
+        currentGame = new Game();
+        currentGame.printPieces();
+        pieces.get(20).printPossible();
 
         JFrame frame = new menu();
 

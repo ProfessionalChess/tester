@@ -1,6 +1,7 @@
 package gui;
 
 import java.awt.Point;
+import java.util.ArrayList;
 
 public abstract class Piece {
     public boolean colour;
@@ -25,8 +26,15 @@ public abstract class Piece {
 
     public void printPossible(){}
 
+    public Point getLoc(){
+        return loc;
+    }
+    public ArrayList<Point> getpM(){
+        return null;
+    }
+    public void removepM(int temp){
 
-
+    }
 
 
 

@@ -16,8 +16,9 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 
 public class board extends JFrame{
+
     private JPanel mainBoard;
-    private JButton b11 = new JButton("");
+    private JButton b11;
     private JButton b35;
     private JButton b21;
     private JButton b31;
@@ -150,7 +151,6 @@ public class board extends JFrame{
     public static ImageIcon[][] images = new ImageIcon[8][8];
 
     public board() {
-
         this.setContentPane(mainBoard);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.pack();

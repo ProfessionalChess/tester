@@ -34,4 +34,10 @@ public class King extends Piece {
             System.out.println(pM.get(i));
         }
     }
+    public ArrayList<Point> getpM(){
+        return pM;
+    }
+    public void removepM(int temp){
+        pM.remove(temp);
+    }
 }
