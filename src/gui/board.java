@@ -1,14 +1,23 @@
 package gui;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
+import javax.swing.Box;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
 
 public class board extends JFrame{
-
     private JPanel mainBoard;
-    private JButton b11;
+    private JButton b11 = new JButton("");
     private JButton b35;
     private JButton b21;
     private JButton b31;
@@ -141,10 +150,20 @@ public class board extends JFrame{
     public static ImageIcon[][] images = new ImageIcon[8][8];
 
     public board() {
+
         this.setContentPane(mainBoard);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.pack();
         this.setVisible(true);
+
+
+
+        //b14.setMargin(new Insets(0, 0, 0, 0));
+// to add a different background
+        //b14.setBackground( ... );
+// to remove the border
+        //b14.setBorder(null);
+        //b14.setIcon(new ImageIcon(Class.class.getResource("data/bRook.jpg")));
 
         b11.addActionListener(new ActionListener() {
             @Override
@@ -171,6 +190,10 @@ public class board extends JFrame{
            num1 = input;
        } else if(num1 != 0) {
            num2 = input;
+           //move the piece if possible
+           num1 = 0;
+           num2 = 0;
+           //switch player move
        } else {
            System.out.println("huh");
        }
