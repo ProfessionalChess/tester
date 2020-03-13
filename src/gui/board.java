@@ -1,9 +1,9 @@
 package gui;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 
 public class board extends JFrame{
 
@@ -140,6 +140,8 @@ public class board extends JFrame{
     public static int num2 = 0;
     public static ImageIcon[][] images = new ImageIcon[8][8];
 
+
+
     public board() {
         this.setContentPane(mainBoard);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -171,6 +173,7 @@ public class board extends JFrame{
            num1 = input;
        } else if(num1 != 0) {
            num2 = input;
+
        } else {
            System.out.println("huh");
        }
