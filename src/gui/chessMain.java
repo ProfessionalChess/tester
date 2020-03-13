@@ -26,12 +26,30 @@ public class chessMain {
             }
         }
         //end of points
-        //pieces.add(new Pawn(true, 1,7));
-        pieces.add(new Queen(true, 4,5));
-        pieces.add(new Rook(true, 4,5));
-         pieces.add(new Bishop(true, 4,5));
-        pieces.get(2).possibleMoves();
-        pieces.get(2).printPossible();
+        for (int i = 0; i < 8; i++) {
+            pieces.add(new Pawn(true, i+1,7));
+        }
+        for (int i = 0; i < 8; i++) {
+            pieces.add(new Pawn(false, i+1,2));
+        }
+        pieces.add(new Rook(true, 1,8));
+        pieces.add(new Knight(true, 2,8));
+        pieces.add(new Bishop(true, 3,8));
+        pieces.add(new Queen(true, 4,8));
+        pieces.add(new King(true, 5,8));
+        pieces.add(new Bishop(true, 6,8));
+        pieces.add(new Knight(true, 7,8));
+        pieces.add(new Rook(true, 8,8));
+
+        pieces.add(new Rook(false, 1,2));
+        pieces.add(new Knight(false, 2,2));
+        pieces.add(new Bishop(false, 3,2));
+        pieces.add(new Queen(false, 4,2));
+        pieces.add(new King(false, 5,2));
+        pieces.add(new Bishop(false, 6,2));
+        pieces.add(new Knight(false, 7,2));
+        pieces.add(new Rook(false, 8,2));
+
         JFrame frame = new menu();
 
     }//end main
